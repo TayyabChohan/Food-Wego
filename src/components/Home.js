@@ -141,9 +141,8 @@ const Home = () => {
           <div className="percentage">%</div>
           <div className="card-text">
             <h5>Steak it Easy</h5>
-            <ul className="card-url">
+            <ul className="card-url crd-mt">
               <li> 
-                
                 <button>
                   <ul className="card-url">
                     <li>

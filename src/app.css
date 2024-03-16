@@ -40,6 +40,7 @@ main {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .card-main img {
@@ -48,8 +49,55 @@ main {
   border-top-right-radius: 10px;
   padding: 0;
 }
-.card-main h5{
+.card-main h5 {
   font-size: 16px;
   color: black;
   margin: unset;
+}
+.card-text {
+  padding: 20px;
+}
+.card-main .card-url {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.card-main .card-url li {
+  display: inline-block;
+}
+.card-main button {
+  background-color: #ccc;
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-main button i {
+  margin-right: 5px;
+}
+
+.card-main h6 {
+  margin: unset;
+  font-size: 12px;
+}
+.card-main .button-ml {
+  margin-left: 10px;
+}
+.card-main .new-clr {
+  color: green;
+}
+.crd-mt {
+  margin-top: 10px !important;
+}
+.percentage {
+  padding: 8px 17px;
+  position: absolute;
+  top: 0;
+  background: blueviolet;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: white;
+  text-align: center;
 }
