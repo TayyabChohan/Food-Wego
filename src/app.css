@@ -28,7 +28,18 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.load-more {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 main {
+  width: 95%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -100,4 +111,74 @@ main {
   border-bottom-right-radius: 10px;
   color: white;
   text-align: center;
+}
+/* input styling */
+.search-container {
+  position: relative;
+  width: 300px;
+}
+
+.search-input {
+  width: calc(100% - 40px); /* Adjust to accommodate the button */
+  padding: 10px 10px 10px 40px; /* Adjust padding for the input field */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-button {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 40px;
+
+  background-color: unset;
+  border: none;
+  border-right: unset;
+  border-radius: unset;
+  cursor: pointer;
+}
+
+.search-button i {
+  color: #888; /* Color of the search icon */
+}
+
+.search-input:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+/* group button styling */
+
+
+.button-group {
+  display: flex;
+  margin-top: 20px;
+}
+
+.button-group button {
+  border: 2px solid yellow;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.button-group button.active {
+  background-color: yellow;
+  color: black;
+}
+
+.button-group button:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.button-group button:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.button-group button:not() {
+  margin-left: -2px; 
+  /* Adjust for overlapping borders */
 }
