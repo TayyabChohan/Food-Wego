@@ -1,38 +1,173 @@
 import React from "react";
-
+import Nature from "../assets/image/Nature.jpg";
 const Home = () => {
   return (
     <>
       <main>
-        <div class="food-item">
-          <img src="https://picsum.photos/id/1011/800/450" alt="Pizza" />
-          <h3>Thin-Crust Pizza</h3>
-          <p>Rating: 4.7 (50 min)</p>
+        <div className="card-main">
+          <img src={Nature} alt="No image" />
+          <div className="percentage">%</div>
+          <div className="card-text">
+            <h5>Steak it Easy</h5>
+            <ul className="card-url">
+              <li>
+                <button>
+                  <ul className="card-url">
+                    <li>
+                      {" "}
+                      <i class="fas fa-star"></i>
+                    </li>
+                    <li>
+                      {" "}
+                      <h6>4.7</h6>
+                    </li>
+                  </ul>
+                </button>
+              </li>
+              <li className="button-ml">
+                <button>
+                  <h6>50-70 min</h6>
+                </button>
+              </li>
+              <li className="button-ml">
+                <button>
+                  <h6 className="new-clr">New</h6>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="food-item">
-          <img src="https://picsum.photos/id/1011/800/450" alt="Pizza" />
-          <h3>Thin-Crust Pizza</h3>
-          <p>Rating: 4.7 (50 min)</p>
+        <div className="card-main">
+          <img src={Nature} alt="No image" />
+          <div className="percentage">%</div>
+          <div className="card-text">
+            <h5>Steak it Easy</h5>
+            <ul className="card-url">
+              <li>
+                <button>
+                  <ul className="card-url">
+                    <li>
+                      {" "}
+                      <i class="fas fa-star"></i>
+                    </li>
+                    <li>
+                      {" "}
+                      <h6>4.7</h6>
+                    </li>
+                  </ul>
+                </button>
+              </li>
+              <li className="button-ml">
+                <button>
+                  <h6>50-70 min</h6>
+                </button>
+              </li>
+              <li className="button-ml">
+                <button>
+                  <h6 className="new-clr">New</h6>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="food-item">
-          <img src="https://picsum.photos/id/1011/800/450" alt="Pizza" />
-          <h3>Thin-Crust Pizza</h3>
-          <p>Rating: 4.7 (50 min)</p>
+        <div className="card-main">
+          <img src={Nature} alt="No image" />
+          <div className="percentage">%</div>
+          <div className="card-text">
+            <h5>Steak it Easy</h5>
+            <ul className="card-url">
+              <li>
+                <button>
+                  <ul className="card-url">
+                    <li>
+                      {" "}
+                      <i class="fas fa-star"></i>
+                    </li>
+                    <li>
+                      {" "}
+                      <h6>4.7</h6>
+                    </li>
+                  </ul>
+                </button>
+              </li>
+              <li className="button-ml">
+                <button>
+                  <h6>50-70 min</h6>
+                </button>
+              </li>
+              <li className="button-ml">
+                <button>
+                  <h6 className="new-clr">New</h6>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="food-item">
-          <img src="https://picsum.photos/id/1011/800/450" alt="Pizza" />
-          <h3>Thin-Crust Pizza</h3>
-          <p>Rating: 4.7 (50 min)</p>
+        <div className="card-main">
+          <img src={Nature} alt="No image" />
+          <div className="percentage">%</div>
+          <div className="card-text">
+            <h5>Steak it Easy</h5>
+            <ul className="card-url">
+              <li>
+                <button>
+                  <ul className="card-url">
+                    <li>
+                      {" "}
+                      <i class="fas fa-star"></i>
+                    </li>
+                    <li>
+                      {" "}
+                      <h6>4.7</h6>
+                    </li>
+                  </ul>
+                </button>
+              </li>
+              <li className="button-ml">
+                <button>
+                  <h6>50-70 min</h6>
+                </button>
+              </li>
+              <li className="button-ml">
+                <button>
+                  <h6 className="new-clr">New</h6>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="food-item">
-          <img src="https://picsum.photos/id/1011/800/450" alt="Pizza" />
-          <h3>Thin-Crust Pizza</h3>
-          <p>Rating: 4.7 (50 min)</p>
-        </div>
-        <div class="food-item">
-          <img src="https://picsum.photos/id/1011/800/450" alt="Pizza" />
-          <h3>Thin-Crust Pizza</h3>
-          <p>Rating: 4.7 (50 min)</p>
+        <div className="card-main">
+          <img src={Nature} alt="No image" />
+          <div className="percentage">%</div>
+          <div className="card-text">
+            <h5>Steak it Easy</h5>
+            <ul className="card-url">
+              <li>
+                <button>
+                  <ul className="card-url">
+                    <li>
+                      {" "}
+                      <i class="fas fa-star"></i>
+                    </li>
+                    <li>
+                      {" "}
+                      <h6>4.7</h6>
+                    </li>
+                  </ul>
+                </button>
+              </li>
+              <li className="button-ml">
+                <button>
+                  <h6>50-70 min</h6>
+                </button>
+              </li>
+              <li className="button-ml">
+                <button>
+                  <h6 className="new-clr">New</h6>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </main>
 
