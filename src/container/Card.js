@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 const Card = ({ isfoodProductList }) => {
   const promotionColors = {
     "1+1": "blueviolet",
@@ -18,7 +18,6 @@ const Card = ({ isfoodProductList }) => {
               {item.promotion}
             </div>
           )}
-
           <div className="card-text">
             <h5>{item?.name}</h5>
             <ul className="card-url">

@@ -1,27 +1,43 @@
 import React, { useEffect, useState } from "react";
-import Nature from "../assets/image/Nature.jpg";
 import * as getFoodProducts from "../services/getFoodProducts";
+import LoadMoreButton from "../container/Button";
 import Card from "../container/Card";
 const Home = () => {
   const [isfoodProductList, setFoodProductList] = useState([]);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(6); // Number of data items load at first render
   useEffect(() => {
     async function fetchData() {
-      const result = await getFoodProducts.getFoodlist();
-      console.log(result.data.foods);
-      if (result) {
-        setFoodProductList(result.data.foods);
+      try {
+        const result = await getFoodProducts.getFoodlist();
+        if (result) {
+          setFoodProductList(result.data.foods);
+        }
+      } catch (error) {
+        console.error("Error fetching food products:", error);
       }
     }
     fetchData();
   }, []);
+  const handleLoadMore = () => {
+    setIsLoadingMore(true);
+    setTimeout(() => {
+      setVisibleCount((prevCount) => prevCount + 6); // Increase the count to load more items
+      setIsLoadingMore(false);
+    }, 6000); // Simulated loading delay
+  };
   console.log(isfoodProductList, "isfoodProductList");
   return (
     <>
       <main>
-        <Card isfoodProductList={isfoodProductList} />
+        <Card isfoodProductList={isfoodProductList.slice(0, visibleCount)} />
       </main>
-
-      <button className="load-more">Show More</button>
+      {visibleCount < isfoodProductList.length && (
+        <LoadMoreButton
+          onLoadMore={handleLoadMore}
+          isLoadingMore={isLoadingMore}
+        />
+      )}
     </>
   );
 };
