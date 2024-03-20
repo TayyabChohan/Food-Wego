@@ -8,7 +8,7 @@ const Card = ({ isfoodProductList }) => {
   return (
     <>
       {isfoodProductList.map((item, index) => (
-        <div className="card-main">
+        <div className="card-main" key={index}>
           <img src={item?.imageUrl} alt="No image" />
           {item?.promotion && (
             <div

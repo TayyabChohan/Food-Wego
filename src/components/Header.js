@@ -1,28 +1,19 @@
 import React from "react";
-const Header = () => {
+import GroupButton from "../container/GroupButton";
+import SearchInput from "../container/SearchInput";
+const Header = ({ foodCategory, onSelectedCategory }) => {
   return (
     <>
       <div className="container-main">
         {/* input started */}
-        <div className="search-container">
-          <input type="text" className="search-input" placeholder="Search..." />
-          <button type="submit" className="search-button">
-            <i className="fa fa-search"></i>
-          </button>
-        </div>
-        {/* input ended */}
-        {/* button group started */}
-        <div className="button-group">
-          <button className="active">All</button>
-          <button>Sushi</button>
-          <button>Pizza</button>
-          <button>Burger</button>
-          <button>Hot Meals</button>
-          <button>Desserts</button>
-          <button>Drinks</button>
-        </div>
+        <SearchInput />
 
-        {/* button group ended */}
+        {/* button group started */}
+        <GroupButton
+          foodCategory={foodCategory}
+          onSelectedCategory={onSelectedCategory}
+          // selectedCategory={selectedCategory}
+        />
       </div>
     </>
   );

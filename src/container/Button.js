@@ -1,6 +1,6 @@
 import React from "react";
 
-const LoadMoreButton = ({ onLoadMore,isLoadingMore }) => {
+const LoadMoreButton = ({ onLoadMore,isLoadingMore }) => {  
   return (
     <button className="load-more" onClick={onLoadMore}>
      {isLoadingMore ? "Loading..." : "Load More"}

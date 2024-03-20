@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as getFoodProducts from "../services/getFoodProducts";
 import LoadMoreButton from "../container/Button";
 import Card from "../container/Card";
-const Home = () => {
+const Home = ({ selectedCategory }) => {
   const [isfoodProductList, setFoodProductList] = useState([]);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [visibleCount, setVisibleCount] = useState(6); // Number of data items load at first render
@@ -23,10 +23,18 @@ const Home = () => {
     setIsLoadingMore(true);
     setTimeout(() => {
       setVisibleCount((prevCount) => prevCount + 6); // Increase the count to load more items
-      setIsLoadingMore(false);
-    }, 6000); // Simulated loading delay
+    }, 2000); // Simulated loading delay
+    setIsLoadingMore(false);
   };
-  console.log(isfoodProductList, "isfoodProductList");
+  useEffect(() => {
+    if (selectedCategory) {
+      const filteredData = isfoodProductList.filter(
+        (i) => i.categoryId === selectedCategory
+      );
+      setFoodProductList(filteredData);
+      console.log(filteredData,isfoodProductList);
+    }
+  }, [selectedCategory]);
   return (
     <>
       <main>
