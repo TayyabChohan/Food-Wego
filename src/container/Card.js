@@ -37,7 +37,7 @@ const Card = ({ isfoodProductList }) => {
                 className="percentage"
                 style={{ background: promotionColors[item.promotion] }}
               >
-                {promotionIcons[item.promotion]} {/* Render the icon */}
+                {promotionIcons[item.promotion]} 
                 {item.promotion}
               </div>
             )}

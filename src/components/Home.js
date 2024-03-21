@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import * as getFoodProducts from "../services/getFoodProducts";
 import LoadMoreButton from "../container/Button";
 import Card from "../container/Card";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Home = ({ selectedCategory, isSearch }) => {
   const [isfoodProductList, setFoodProductList] = useState([]);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
@@ -14,10 +16,12 @@ const Home = ({ selectedCategory, isSearch }) => {
         if (result) {
           setFoodProductList(result.data.foods);
           setIsLoading(false);
+          toast.success("Data loaded successfully")
         }
       } catch (error) {
         console.error("Error fetching food products:", error);
         setIsLoading(false);
+        toast.error("Something Wronge  please check internet connection")
       }
     }
     fetchData();
@@ -55,6 +59,7 @@ const Home = ({ selectedCategory, isSearch }) => {
           isLoadingMore={isLoadingMore}
         />
       )}
+      <ToastContainer />
     </>
   );
 };
