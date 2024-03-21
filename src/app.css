@@ -32,9 +32,9 @@ body {
   display: block;
   margin: 20px auto;
   padding: 10px 20px;
-  background-color: #333;
-  color: white;
-  border: none;
+  background-color: #f7f4f4;
+  color: rgb(37, 36, 36);
+  border: 1px solid orange;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -79,7 +79,7 @@ main {
   display: inline-block;
 }
 .card-main button {
-  background-color: #ccc;
+  background-color: #f5efef;
   border: none;
   border-radius: 10px;
   padding: 5px 10px;
@@ -149,14 +149,13 @@ main {
 
 /* group button styling */
 
-
 .button-group {
   display: flex;
   margin-top: 20px;
 }
 
 .button-group button {
-  border: 2px solid yellow;
+  border: 1px solid rgb(233, 138, 14);
   background-color: white;
   color: black;
   padding: 10px 20px;
@@ -165,7 +164,7 @@ main {
 }
 
 .button-group button.active {
-  background-color: yellow;
+  background-color: rgb(233, 138, 14);
   color: black;
 }
 
@@ -180,6 +179,6 @@ main {
 }
 
 .button-group button:not() {
-  margin-left: -2px; 
+  margin-left: -2px;
   /* Adjust for overlapping borders */
 }

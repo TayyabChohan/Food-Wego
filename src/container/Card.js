@@ -1,5 +1,14 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGift } from "@fortawesome/free-solid-svg-icons"; // Importing the faGift icon
+
 const Card = ({ isfoodProductList }) => {
+  const promotionIcons = {
+    "1+1": null,
+    discount: null,
+    gift: <FontAwesomeIcon icon={faGift} />,
+  };
+
   const promotionColors = {
     "1+1": "blueviolet",
     discount: "lightcoral",
@@ -15,6 +24,7 @@ const Card = ({ isfoodProductList }) => {
               className="percentage"
               style={{ background: promotionColors[item.promotion] }}
             >
+              {promotionIcons[item.promotion]} {/* Render the icon */}
               {item.promotion}
             </div>
           )}

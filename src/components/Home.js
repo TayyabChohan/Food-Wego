@@ -23,7 +23,7 @@ const Home = ({ selectedCategory, isSearch }) => {
     setIsLoadingMore(true);
     setTimeout(() => {
       setVisibleCount((prevCount) => prevCount + 6); // Increase the count to load more items
-    }, 2000); // Simulated loading delay
+    }, 2000);
     setIsLoadingMore(false);
   };
 
@@ -36,7 +36,7 @@ const Home = ({ selectedCategory, isSearch }) => {
     item.name.toLowerCase().includes(isSearch.toLowerCase())
   );
 
-  console.log(searchedData, "tayayb ddddd");
+
   return (
     <>
       <main>

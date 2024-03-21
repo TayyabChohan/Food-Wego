@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 const SearchInput = ({ isSearch, setSearch }) => {
   return (
     <>
@@ -12,7 +14,7 @@ const SearchInput = ({ isSearch, setSearch }) => {
           onChange={(e) => setSearch(e.target.value)}
         />
         <button type="submit" className="search-button">
-          <i className="fa fa-search"></i>
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
         </button>
       </div>
     </>
