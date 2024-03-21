@@ -26,15 +26,7 @@ const Home = ({ selectedCategory }) => {
     }, 2000); // Simulated loading delay
     setIsLoadingMore(false);
   };
-  // useEffect(() => {
-  //   if (selectedCategory) {
-  //     const filteredData = isfoodProductList.filter(
-  //       (i) => i.categoryId === selectedCategory
-  //     );
-  //     setFoodProductList(filteredData);
-  //     console.log(filteredData,isfoodProductList);
-  //   }
-  // }, [selectedCategory]);
+
   const filteredData = selectedCategory
     ? isfoodProductList.filter((i) => i.categoryId === selectedCategory)
     : isfoodProductList;

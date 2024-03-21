@@ -1,7 +1,7 @@
 import React from "react";
 import GroupButton from "../container/GroupButton";
 import SearchInput from "../container/SearchInput";
-const Header = ({ foodCategory, onSelectedCategory }) => {
+const Header = ({ foodCategory, onSelectedCategory, selectedCategory }) => {
   return (
     <>
       <div className="container-main">
@@ -12,7 +12,7 @@ const Header = ({ foodCategory, onSelectedCategory }) => {
         <GroupButton
           foodCategory={foodCategory}
           onSelectedCategory={onSelectedCategory}
-          // selectedCategory={selectedCategory}
+          selectedCategory={selectedCategory}
         />
       </div>
     </>

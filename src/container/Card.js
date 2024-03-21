@@ -29,7 +29,6 @@ const Card = ({ isfoodProductList }) => {
                       <i className="fas fa-star"></i>
                     </li>
                     <li>
-                      {" "}
                       <h6>{item.rating.toFixed(1)}</h6>
                     </li>
                   </ul>
@@ -38,8 +37,7 @@ const Card = ({ isfoodProductList }) => {
               <li className="button-ml">
                 <button>
                   <h6>
-                    {" "}
-                    `${item.minCookTime}-${item.maxCookTime}`min
+                    `{item.minCookTime}-{item.maxCookTime}`min
                   </h6>
                 </button>
               </li>

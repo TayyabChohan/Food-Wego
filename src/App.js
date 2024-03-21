@@ -29,6 +29,7 @@ function App() {
         <Header
           foodCategory={foodCategory}
           onSelectedCategory={setSelectedCategory}
+          selectedCategory={selectedCategory}
         />
         <Home selectedCategory={selectedCategory} />
       </>
