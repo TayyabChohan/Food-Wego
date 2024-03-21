@@ -21,11 +21,7 @@ function App() {
     }
     fetchData();
   }, []);
-  // console.log(foodCategory, "foodCategory");
-  // console.log(selectedCategory, "selectedCategory");
-  console.log(isSearch, setSearch);
   return (
-    // onSelectedCategory, selectedCategory
     <Router>
       <>
         <Header

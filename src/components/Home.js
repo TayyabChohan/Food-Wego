@@ -5,6 +5,7 @@ import Card from "../container/Card";
 const Home = ({ selectedCategory, isSearch }) => {
   const [isfoodProductList, setFoodProductList] = useState([]);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [visibleCount, setVisibleCount] = useState(6); // Number of data items load at first render
   useEffect(() => {
     async function fetchData() {
@@ -12,18 +13,20 @@ const Home = ({ selectedCategory, isSearch }) => {
         const result = await getFoodProducts.getFoodlist();
         if (result) {
           setFoodProductList(result.data.foods);
+          setIsLoading(false);
         }
       } catch (error) {
         console.error("Error fetching food products:", error);
+        setIsLoading(false);
       }
     }
     fetchData();
   }, []);
   const handleLoadMore = () => {
     setIsLoadingMore(true);
-    setTimeout(() => {
+    // setTimeout(() => {
       setVisibleCount((prevCount) => prevCount + 6); // Increase the count to load more items
-    }, 2000);
+    // }, 2000);
     setIsLoadingMore(false);
   };
 
@@ -39,10 +42,14 @@ const Home = ({ selectedCategory, isSearch }) => {
 
   return (
     <>
-      <main>
-        <Card isfoodProductList={searchedData.slice(0, visibleCount)} />
+       <main>
+        {isLoading ? (
+          <h1>Loading...</h1>
+        ) : (
+          <Card isfoodProductList={searchedData.slice(0, visibleCount)} />
+        )}
       </main>
-      {visibleCount < searchedData.length && (
+      {!isLoading && visibleCount < searchedData.length && (
         <LoadMoreButton
           onLoadMore={handleLoadMore}
           isLoadingMore={isLoadingMore}
