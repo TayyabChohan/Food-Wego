@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as getFoodProducts from "../services/getFoodProducts";
 import LoadMoreButton from "../container/Button";
 import Card from "../container/Card";
-const Home = ({ selectedCategory }) => {
+const Home = ({ selectedCategory, isSearch }) => {
   const [isfoodProductList, setFoodProductList] = useState([]);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [visibleCount, setVisibleCount] = useState(6); // Number of data items load at first render
@@ -30,12 +30,19 @@ const Home = ({ selectedCategory }) => {
   const filteredData = selectedCategory
     ? isfoodProductList.filter((i) => i.categoryId === selectedCategory)
     : isfoodProductList;
+
+  /// to get searched food data
+  const searchedData = filteredData.filter((item) =>
+    item.name.toLowerCase().includes(isSearch.toLowerCase())
+  );
+
+  console.log(searchedData, "tayayb ddddd");
   return (
     <>
       <main>
-        <Card isfoodProductList={filteredData.slice(0, visibleCount)} />
+        <Card isfoodProductList={searchedData.slice(0, visibleCount)} />
       </main>
-      {visibleCount < filteredData.length && (
+      {visibleCount < searchedData.length && (
         <LoadMoreButton
           onLoadMore={handleLoadMore}
           isLoadingMore={isLoadingMore}

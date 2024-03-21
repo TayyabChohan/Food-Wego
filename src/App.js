@@ -7,6 +7,7 @@ import "./app.css";
 function App() {
   const [foodCategory, setFoodCategory] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [isSearch, setSearch] = useState("");
   useEffect(() => {
     async function fetchData() {
       try {
@@ -22,6 +23,7 @@ function App() {
   }, []);
   // console.log(foodCategory, "foodCategory");
   // console.log(selectedCategory, "selectedCategory");
+  console.log(isSearch, setSearch);
   return (
     // onSelectedCategory, selectedCategory
     <Router>
@@ -30,8 +32,10 @@ function App() {
           foodCategory={foodCategory}
           onSelectedCategory={setSelectedCategory}
           selectedCategory={selectedCategory}
+          setSearch={setSearch}
+          isSearch={isSearch}
         />
-        <Home selectedCategory={selectedCategory} />
+        <Home selectedCategory={selectedCategory} isSearch={isSearch} />
       </>
     </Router>
   );

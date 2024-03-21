@@ -1,12 +1,18 @@
 import React from "react";
 import GroupButton from "../container/GroupButton";
 import SearchInput from "../container/SearchInput";
-const Header = ({ foodCategory, onSelectedCategory, selectedCategory }) => {
+const Header = ({
+  foodCategory,
+  onSelectedCategory,
+  selectedCategory,
+  isSearch,
+  setSearch,
+}) => {
   return (
     <>
       <div className="container-main">
         {/* input started */}
-        <SearchInput />
+        <SearchInput isSearch={isSearch} setSearch={setSearch} />
 
         {/* button group started */}
         <GroupButton
